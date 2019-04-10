@@ -5,11 +5,6 @@ require 'digest'
 
 module Badsec
   class User
-
-    def self.ascii
-      puts `artii Noc list`
-    end
-
     def self.get_auth_token
       begin
         retries ||= 0
@@ -48,7 +43,7 @@ module Badsec
         if users_response.code != 200
           STDERR.puts "Response: #{users_response.code}, #{users_response.message}"
         else
-          puts "users: #{users_response}"
+          print JSON.parse(users_response.body.split.to_json)
         end
 
         users_response
