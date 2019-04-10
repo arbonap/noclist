@@ -1,5 +1,6 @@
 require "active_support/all"
-include HTTParty
+require "byebug"
+require "HTTParty"
 
 module Badsec
   class User
