@@ -1,6 +1,7 @@
 require "byebug"
-require_relative "retriever"
+require_relative "badsec"
   class Cli
-    extend Parser
-    
+    extend Badsec
+
+    Badsec::User.new.get_request
   end
