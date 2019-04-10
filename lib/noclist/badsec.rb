@@ -5,6 +5,11 @@ require 'digest'
 
 module Badsec
   class User
+
+    def self.ascii
+      puts `artii Noc list`
+    end
+
     def self.get_auth_token
       begin
         retries ||= 0
