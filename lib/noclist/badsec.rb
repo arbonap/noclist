@@ -19,7 +19,7 @@ module Badsec
       rescue => e
         STDERR.puts "Exception: #{e.message}"
 
-        if (retries += 1) < 2
+        if (retries += 1) < 3
           puts "Retrying..."
           retry
         else
@@ -49,7 +49,7 @@ module Badsec
         users_response
       rescue => e
         STDERR.puts "Exception: #{e.message}"
-        if (retries += 1) < 2
+        if (retries += 1) < 3
           puts "Retrying..."
           retry
         else
