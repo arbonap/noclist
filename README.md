@@ -3,6 +3,8 @@ _Retrieve a list of VIP user IDs and print it to STDOUT in JSON format_
 
 ## Installation
 
+![how to set up noclist gem locally](noclist.gif)
+
 Assuming your machine is set up for the Ruby ecosystem:
 
     $ bin/setup
@@ -20,7 +22,7 @@ _Make sure to run the server before running the gem or test-suite_:
 
 To run the entire test-suite:
 
-    $ `bundle exec rspec spec`
+    $ bundle exec rspec spec
 
 ## Debugging 🐛
 
