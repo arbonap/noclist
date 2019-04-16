@@ -1,23 +1,31 @@
-# Noclist 🌌 
-
-Put your Ruby code in the file `lib/noclist`. To experiment with that code, run `bin/console` for an interactive prompt.
+# Noclist 🌌
+_Retrieve a list of VIP user IDs and print it to STDOUT in JSON format_
 
 ## Installation
 
 Assuming your machine is set up for the Ruby ecosystem:
 
-    $ gem install noclist
     $ bin/setup
+    $ bundle exec rake install
 
-## Usage
+_Make sure to run the server before running the gem or test-suite_:
 
-- To run the test-suite, run `rspec spec`
+    $ docker run --rm -p 8888:8888 adhocteam/noclist
 
-## Development
+## Gem Usage
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
+    $ noclist
 
-To install this gem onto your local machine, run `bundle exec rake install`.
+## Running tests
+
+To run the entire test-suite:
+
+    $ `bundle exec rspec spec`
+
+## Debugging 🐛
+
+- Insert `require 'byebug'` at the top of a file (paying particular attention to `badsec.rb` and `cli.rb`), and throw in a `byebug` statement as your break-point.
+- Alternatively, run `bin/console` for an interactive prompt for debugging purposes.
 
 ## License
 

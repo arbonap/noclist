@@ -1,7 +1,7 @@
 require "active_support/all"
 require "byebug"
 require "HTTParty"
-require 'digest'
+require "digest"
 
 module Badsec
   class User
@@ -43,7 +43,7 @@ module Badsec
         if users_response.code != 200
           STDERR.puts "Response: #{users_response.code}, #{users_response.message}"
         else
-          print JSON.parse(users_response.body.split.to_json)
+          print format(users_response) unless ENV['GEM_ENV'] == 'TEST'
         end
 
         users_response
@@ -57,6 +57,10 @@ module Badsec
           exit
         end
       end
+    end
+
+    def format(users_response)
+      JSON.parse(users_response.body.split.to_json)
     end
   end
 end

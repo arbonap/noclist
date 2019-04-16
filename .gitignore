@@ -6,6 +6,8 @@
 /pkg/
 /spec/reports/
 /tmp/
-
+.byebug_history
+.git
+.DS_STORE
 # rspec failure tracking
 .rspec_status
